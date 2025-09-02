@@ -57,7 +57,7 @@ This project has **two parts**:
 </p>
 
 <p align="center">
-  <img src="part2-excel-analytics/charts/4-The highest month of demand - line chart.png" width="700" alt="Excel Analytics of Highest Time of Data Jobs' Demand"/>
+  <img src="part2-excel-analytics/charts/4- The highest month of demand - line chart.png" width="700" alt=" Excel Analytics of Highest Time of Data Jobs' Demand"/>
 </p>
 
 ---

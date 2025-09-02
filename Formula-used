@@ -8,14 +8,15 @@ It serves as a technical reference for anyone who wants to reproduce or learn fr
 ## 🔹 Google Sheets Formulas
 
 ### Dynamic ranges & quick stats
-- **Count postings per role (with filters):**
+
+**Count postings per role (with filters):**
+```gs
 =COUNTIFS(
   jobs[job_title_short], A2,
   jobs[job_schedule_type], type,
   jobs[job_country], country
 )
-
-- **Median salary per role + country + schedule (ignore blanks & zeros):**
+**Median salary per role + country + schedule (ignore blanks & zeros):**
 =MEDIAN(
    IF(
      (jobs[job_title_short] = A2) *
@@ -25,58 +26,29 @@ It serves as a technical reference for anyone who wants to reproduce or learn fr
      jobs[salary_year_avg]
    )
 )
-
-## Interactive controls
-- `=SORT(FILTER(...), 3, FALSE)` — sort filtered table by salary desc.
-- `=UNIQUE(jobs[job_country])` — Unique list of countries (remove duplicates).
-
-## Job schedule parsing (example)
-- Unique job schedule types:
-  =UNIQUE(jobs[job_schedule_type])
-- Extract part before "and":
-  =IFERROR(filter(G2,not(ISNUMBER(SEARCH("and ",G2)))),"")` 
-
-# Excel Power Query (M) — Key Steps
-
-1) **Source & Type**
-   - Connect to dataset
-   - Set correct column types (Date, Text, Whole Number, Currency).
-
-2) **Cleaning**
-   - Trim/Clean text
-   - Remove duplicates
-   
-3) **Transformations**
-   - Split skills column by delimiter `,` after removing brackets/quotes.
-   - Add Month/Year columns from post_date.
-   - Replace missing salaries with null; filter out extreme outliers (explain rule).
-
-4) **Outputs**
-   - Load to data model → build Pivot Tables/Charts:
-     - Median/Avg salary by role
-     - Median/Avg salary by country
-     - Skills frequency
-     - Monthly posting trend
-
-# Measures / Calculations
-
-## Pivot Measures (Excel)
-- Median Salary: 
-  - Median Salary:=
-  MEDIAN(Data_jobs[salary_year_avg]).
-  - Median Salary US:=
-  CALCULATE([Median Salary],Data_jobs[job_country]= "United States")
-  - Median Salary Non-US:=
-  CALCULATE([Median Salary],Data_jobs[job_country]<> "United States")
-  - Median Salary per Skills:=
-  CALCULATE(
-    [Median Salary], -- measure
-    CROSSFILTER(Data_jobs[job_id], Data_jobs_skills[job_id], BOTH) -- to make model work into two directions.
-)
-- Postings Count: 
-  Count Jobs:=DISTINCTCOUNT(Data_jobs[job_id]).
-- Skills Count: 
-  Count skills:=COUNT(Data_jobs_skills[job_skills])
-- Average Skills per Job Posting: 
-  Average skills per job:=DIVIDE([Count skills],[Count Jobs])
+**Interactive controls**
+=SORT(FILTER(...), 3, FALSE)       // sort filtered table by salary desc
+=UNIQUE(jobs[job_country])         // unique list of countries
+**Job schedule parsing**
+=UNIQUE(jobs[job_schedule_type])   // unique job schedule types
+=IFERROR(FILTER(G2, NOT(ISNUMBER(SEARCH("and ", G2)))),"") 
+// extract part before "and"
+## 🔹 Excel Power Query (M) — Key Steps
+**Source & Type**
+- Connect to dataset
+- Set correct column types (Date, Text, Number, Currency)
+**Cleaning**
+- Trim/Clean text
+- Remove duplicates by job_id
+**Transformations**
+- Split job_skills column by delimiter , after removing brackets/quotes
+- Add Month, Year, Year-Month columns from post_date
+- Replace missing salaries with null
+- Filter out extreme outliers
+**Outputs**
+- Load to Data Model → build Pivot Tables/Charts:
+- Median/Avg salary by role
+- Median/Avg salary by country
+- Skills frequency
+- Monthly posting trend
 

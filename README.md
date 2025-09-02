@@ -53,11 +53,14 @@ This project has **two parts**:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="part1-google-sheets-dashboard/screen-shots/01-dashboard.png" width="700" alt="Google Sheets Dashboard Overview"/>
+  <img src="part1-google-sheets-dashboard/screen-shots/01-dashboard.png" 
+       width="700" 
+       alt="Google Sheets Dashboard Overview"/>
 </p>
 
-<p align="center">
-  <img src="part2-excel-analytics/charts/4- The highest month of demand - line chart.png" width="700" alt=" Excel Analytics of Highest Time of Data Jobs' Demand"/>
+<img src="part2-excel-analytics/charts/3- Avg skills vs salaries.png" 
+     width="700" 
+     alt="Scatter plot showing that higher-salary roles (e.g., Senior Data Engineer, Senior Data Scientist) often require more skills, while roles like Data Analyst and Business Analyst have fewer skills but lower salaries."/>
 </p>
 
 ---

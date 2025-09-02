@@ -46,21 +46,18 @@ This project has **two parts**:
 - 📂 Files: [`/part2-excel-analytics`](./part2-excel-analytics)
 - 🔗 [Excel Analytics (view link)](https://github.com/MooRahim/analyze-data-job-posts-using-google_sheets-excel/blob/main/part2-excel-analytics/part2-data-jobs-excel-analytics.xlsx) 
 - 📑 [Insights Presentation (PDF)](https://github.com/MooRahim/analyze-data-job-posts-using-google_sheets-excel/blob/main/part2-excel-analytics/data-job-market-insights-presentation.pdf)
-- 🔗 [Google Slides presentation (view link)](https://docs.google.com/presentation/d/1efkR9teBdNx13HMppql_jqsV2w8bBS1Sl4lFzyDKQPg/edit?usp=sharing)
+- 📑 [Google Slides presentation (view link)](https://docs.google.com/presentation/d/1efkR9teBdNx13HMppql_jqsV2w8bBS1Sl4lFzyDKQPg/edit?usp=sharing)
 
 ---
 
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="part1-google-sheets-dashboard/screen-shots/01-dashboard.png" 
-       width="700" 
-       alt="Google Sheets Dashboard Overview"/>
+  <img src="part1-google-sheets-dashboard/screen-shots/01-dashboard.png" width="600" alt="Google Sheets dashboard showing salary distribution, job types, and hiring platforms"/>
 </p>
 
-<img src="part2-excel-analytics/charts/3- Avg skills vs salaries.png" 
-     width="700" 
-     alt="Scatter plot showing that higher-salary roles (e.g., Senior Data Engineer, Senior Data Scientist) often require more skills, while roles like Data Analyst and Business Analyst have fewer skills but lower salaries."/>
+<p align="center">
+  <img src="part2-excel-analytics/charts/3- Avg skills vs salaries.png" width="600" alt="Scatter plot showing relationship between average number of skills required and median salary across data roles"/>
 </p>
 
 ---

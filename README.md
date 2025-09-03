@@ -1,4 +1,4 @@
-# Data Jobs Market 2023 — Salaries, Skills Demand & Seasonal Trends
+# Data Jobs Market Analytics — Salaries, Skills Demand & Seasonal Trends
 
 Analyzed **32,000+ data job postings** to uncover:
 - 💰 Top-paying roles

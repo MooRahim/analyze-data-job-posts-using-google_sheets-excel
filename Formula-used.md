@@ -1,6 +1,6 @@
 # 📊 Formulas & Calculations Documentation
 
-This document collects all key formulas, Power Query steps, and DAX measures used in the **Data Jobs Market 2023** project.  
+This document collects all key formulas, Power Query steps, and DAX measures used in the **Data Jobs Market Analysis** project.  
 It serves as a technical reference for anyone who wants to reproduce or learn from this work.
 
 ---

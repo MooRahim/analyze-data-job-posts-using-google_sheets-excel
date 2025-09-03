@@ -78,10 +78,6 @@ This project has **two parts**:
 │  ├─ screenshots/       # Analysis visuals
 │  └─ screen-records/    # Demo video recordings
 │
-├─ reports/
-│  ├─ one-pager.md       # 60-second recruiter summary
-│  └─ slides.pdf         # Interview slide deck
-│
 ├─ formulas-used.md
 ├─ README.md
 └─ LICENSE
@@ -122,6 +118,12 @@ This project has **two parts**:
 - Identified critical skills to prioritize for career growth.  
 - Highlighted the best season to apply for data jobs.  
 - Showed best-fit roles for both career starters and professionals looking to upgrade.
+
+---
+
+## 🧩 Tech Notes
+For a detailed breakdown of all formulas, Power Query steps, and DAX measures used in this project, see:
+- [Formula-used.md](./Formula-used.md)
 
 ---
 
